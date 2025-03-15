@@ -96,14 +96,13 @@ nav ul li a:hover {
     }
     
     .contact-info {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
     }
     
     .phone, .email {
+        width: 100%;
         margin-bottom: 10px;
     }
     
@@ -114,7 +113,9 @@ nav ul li a:hover {
     }
     
     .language-selector {
-        width: auto;
+        width: 100%;
+        max-width: 200px;
+        text-align: right;
     }
     
     nav {
@@ -188,6 +189,10 @@ nav ul li a:hover {
     }
 
     /* Estilos específicos para "Servicios" en móviles */
+    #servicios {
+        padding: 30px 20px;
+    }
+    
     .services-container {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -204,6 +209,32 @@ nav ul li a:hover {
     
     .service-image {
         margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .service-text {
+        padding: 0 10px;
+    }
+    
+    /* Estilos para el footer en móviles */
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-contact, .footer-legal {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .contact-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .social-icons {
+        justify-content: center;
     }
 }
 

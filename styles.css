@@ -1,0 +1,524 @@
+/* Importar fuente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    transition: color 0.3s ease-in-out;
+    aria-label: "Enlace de navegación";
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+.language-selector-container {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+.language-selector {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .contact-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .phone, .email {
+        margin-bottom: 10px;
+    }
+    
+    .language-selector-container {
+        width: 100%;
+        text-align: right;
+        margin-top: 10px;
+    }
+    
+    .language-selector {
+        width: auto;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        padding: 8px 0;
+        font-size: 0.9rem;
+    }
+    
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .language-selector-container {
+        margin-top: 10px;
+    }
+
+    #sobre-mi, .services-container, .testimonials-container, .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .service-category {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    /* Estilos específicos para "Sobre Mí" en móviles */
+    #sobre-mi {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image {
+        width: 250px;
+        margin: 0 auto 20px auto;
+    }
+    
+    .about-text {
+        padding: 0 20px;
+    }
+
+    /* Estilos específicos para "Servicios" en móviles */
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-category {
+        margin-bottom: 30px;
+    }
+    
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .service-image {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Estilos para la sección de inicio */
+#inicio {
+    position: relative;
+    text-align: center;
+    padding: 100px 0;
+    background-color: #f5f5f5;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #8B0000;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #660000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección 'Sobre Mí' */
+#sobre-mi {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.about-image {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección 'Servicios' */
+#servicios {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-category {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.service-image {
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-text {
+    flex: 1;
+}
+
+/* Estilos para la sección 'Galería' */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.gallery-image {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la sección 'Testimonios' */
+.testimonials-container {
+    display: flex;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.testimonial {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.testimonial-text p {
+    font-style: italic;
+}
+
+/* Estilos para la sección 'Instagram' */
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.instagram-placeholder {
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Estilos para la sección 'Contacto' */
+#contacto form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#contacto form input,
+#contacto form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contacto form button {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contacto form button:hover {
+    background-color: #660000;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-contact, .footer-legal {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-legal ul {
+    list-style: none;
+}
+
+.footer-legal ul li {
+    margin-bottom: 10px;
+}
+
+.footer-legal ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-legal ul li a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    color: #888;
+}
+
+/* Estilos para el blog */
+#blog {
+    padding: 50px 0;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.blog-post h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.blog-post p {
+    color: #666;
+}
+
+/* Estilos para el loader */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #8B0000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos para el blog en móviles */
+@media screen and (max-width: 768px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para el contraste en dispositivos con preferencia de alto contraste */
+@media (prefers-contrast: more) {
+  body {
+    forced-color-adjust: none;
+  }
+  
+  .cta-button {
+    background: forced-color-adjust none;
+    border: 2px solid;
+  }
+}
